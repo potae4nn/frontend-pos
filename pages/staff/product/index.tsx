@@ -9,7 +9,6 @@ import {
   Dialog,
   DialogActions,
   DialogContent,
-  DialogContentText,
   DialogTitle,
   FormControl,
   IconButton,
@@ -234,7 +233,6 @@ export default function DataTable() {
             </Button>
           </Box>
           <Box>
-            {" "}
             <FormControl sx={{ mb: 1 }}>
               <Typography variant="body2">เลือกค้นหา</Typography>
               <Select

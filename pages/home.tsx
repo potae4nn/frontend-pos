@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import actions from "@/redux/actions";
-import { Invoice, Product } from "@/types/Product";
-import { ImBarcode, ImBin, ImCart } from "react-icons/im";
+import { Product } from "@/types/Product";
+import { ImBin, ImCart } from "react-icons/im";
 import { MdPayment, MdClose, MdBarcodeReader } from "react-icons/md";
 import QRCode from "qrcode.react";
 import generatePayload from "promptpay-qr";
@@ -20,7 +20,6 @@ import {
   getProductPage,
   postSale,
 } from "@/service/serverService";
-import { loadEnvConfig } from "@next/env";
 import PreviewImage from "@/components/ImagePreview";
 
 type Props = {};
@@ -483,7 +482,6 @@ const Home = (props: Props) => {
                 className="btn btn-lg btn-success w-full pr-6 mt-4"
                 onClick={() => handleSale()}
               >
-                {" "}
                 ขายสินค้า
               </button>
             </div>
@@ -554,8 +552,8 @@ const Home = (props: Props) => {
                                 <input
                                   className="input input-bordered input-primary w-16 m-2 input-sm max-w-xs"
                                   type="number"
-                                  defaultValue={cart.quantity|0}
-                                  value={cart.quantity|0}
+                                  defaultValue={cart.quantity | 0}
+                                  value={cart.quantity | 0}
                                   max={cart.product.Product_Stock}
                                   onKeyUp={(e) => {
                                     if (

@@ -7,7 +7,7 @@ import CardContent from "@mui/material/CardContent";
 import MonetizationOnIcon from "@mui/icons-material/MonetizationOn";
 import ReceiptLongIcon from "@mui/icons-material/ReceiptLong";
 import { getInvoiceCountDateSum } from "@/service/serverService";
-import { ChartContainer, BarPlot } from '@mui/x-charts';
+// import { ChartContainer, BarPlot } from '@mui/x-charts';
 
 
 const uData = [4000, 3000, 2000, 2780, 1890, 2390, 3490];
@@ -60,7 +60,7 @@ const Index = (props: Props) => {
           iconCard={<ReceiptLongIcon fontSize="large" />}
         />
       </Grid>
-      <TinyBarChart/>
+      {/* <TinyBarChart/> */}
     </Layout>
   );
 };
@@ -73,18 +73,18 @@ type Card = {
   iconCard: any;
 };
 
-function TinyBarChart() {
-    return (
-      <ChartContainer
-        width={500}
-        height={300}
-        series={[{ data: uData, label: 'uv', type: 'bar' }]}
-        xAxis={[{ scaleType: 'band', data: xLabels }]}
-      >
-        <BarPlot />
-      </ChartContainer>
-    );
-  }
+// function TinyBarChart() {
+//     return (
+//       <ChartContainer
+//         width={500}
+//         height={300}
+//         series={[{ data: uData, label: 'uv', type: 'bar' }]}
+//         xAxis={[{ scaleType: 'band', data: xLabels }]}
+//       >
+//         <BarPlot />
+//       </ChartContainer>
+//     );
+//   }
 
 const CardNumber = ({
   total,
